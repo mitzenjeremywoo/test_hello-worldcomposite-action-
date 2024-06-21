@@ -6,8 +6,10 @@ jobs:
     name: A job to say hello
     steps:
       - uses: actions/checkout@v4
+      
       - id: foo
-        uses: actions/hello-world-composite-action@v1
+        #uses: actions/hello-world-composite-action@v1
+        uses: mitzenjeremywoo/hello-world-composite-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number "$RANDOM_NUMBER"
